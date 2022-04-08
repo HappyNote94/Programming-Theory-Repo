@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class FighterClass : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private int health = 100;
+    private int mana = 100;
+    private int damage = 100;
 
-    // Update is called once per frame
-    void Update()
+    public int Health { get; set; }
+    public int Mana { get; set; }
+    public int Damage { get; set; }
+
+    public int Attack()
+        {
+            return damage;
+        }
+
+    public virtual void Special()
     {
-        
+
     }
 }
