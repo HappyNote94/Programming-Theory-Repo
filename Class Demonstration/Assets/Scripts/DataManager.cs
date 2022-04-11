@@ -1,0 +1,33 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class DataManager : MonoBehaviour
+{
+    public static DataManager Instance;
+    public string playerClass;
+
+    // Start is called before the first frame update
+    private void Awake()
+    {
+        if(Instance != null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
+
+    // ABSTRACTION
+    private void StartGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+    public void ChooseClass(string chosenClass)
+    {
+        playerClass = chosenClass;
+        StartGame();
+    }
+}
