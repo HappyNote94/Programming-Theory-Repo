@@ -5,11 +5,10 @@ using UnityEngine;
 // INHERITANCE
 public class WarriorClass : FighterClass
 {
-    public WarriorClass(int health, int mana, int damage) : base(health, mana, damage)
+    protected void Awake()
     {
         Health = 200;
     }
-
     // POLYMORPHISM
     public override void Special()
     {

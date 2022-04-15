@@ -9,13 +9,6 @@ public class FighterClass : MonoBehaviour
     public int Mana { get; set; } = 100;
     public int Damage { get; set; } = 100;
 
-    public FighterClass(int health, int mana, int damage)
-    {
-        Health = health;
-        Mana = mana;
-        Damage = damage;
-    }
-
     public void Attack()
     {
         Debug.Log(this.Damage);
